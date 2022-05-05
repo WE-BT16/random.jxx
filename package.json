@@ -7,9 +7,6 @@
     "license": "GPL-3.0-only",
     "main": "index.js",
     "types": "index.d.ts",
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/BT16/random.jxx.git"
