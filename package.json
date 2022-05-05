@@ -1,6 +1,6 @@
 {
     "name": "random.jxx",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Random number and string generator",
     "author": "WE-BT16",
     "homepage": "https://github.com/WE-BT16/random.jxx#readme",
@@ -9,7 +9,7 @@
     "types": "index.d.ts",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BT16/random.jxx.git"
+        "url": "git+https://github.com/WE-BT16/random.jxx.git"
     },
     "scripts": {
         "install": "node-gyp configure build"
