@@ -3,8 +3,7 @@
 #include <string>
 #include <unistd.h>
 
-namespace random_generator {
-    int generate_number(int min, int max){
+int randomNumber(int min, int max) {
     int n = max - min + 1;
     int remainder = RAND_MAX % n;
     int x;
@@ -14,7 +13,7 @@ namespace random_generator {
     return min + x % n;
 }
 
-std::string generate_string(int len) {
+std::string randomString(int len) {
    std::string str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
    std::string newstr;
    int pos;
@@ -25,7 +24,6 @@ std::string generate_string(int len) {
    }
    
    return newstr;
-}
 }
 
 using v8::FunctionCallbackInfo;
@@ -54,14 +52,14 @@ void Random(const FunctionCallbackInfo<Value>& args) {
     }
 
     if (inputTypeString == "string") {
-        args.GetReturnValue().Set(String::NewFromUtf8(isolate, random_generator::generate_string(int(value1)).c_str()).ToLocalChecked());
+        args.GetReturnValue().Set(String::NewFromUtf8(isolate, randomString(int(value1)).c_str()).ToLocalChecked());
     } else if (inputTypeString == "number") {
-        int random_number = random_generator::generate_number(value1, value2);
+        int random_number = randomNumber(value1, value2);
         Local<Number> output = Number::New(isolate, random_number);
 
         args.GetReturnValue().Set(output);
     } else if (inputTypeString == "random") {
-        args.GetReturnValue().Set(String::NewFromUtf8(isolate, random_generator::generate_number(int(random_generator::generate_number(1, 1000))).c_str()).ToLocalChecked());
+        args.GetReturnValue().Set(String::NewFromUtf8(isolate, randomString(int(randomNumber(1, 1000))).c_str()).ToLocalChecked());
     }
 }
 
