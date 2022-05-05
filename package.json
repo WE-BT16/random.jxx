@@ -1,0 +1,29 @@
+{
+    "name": "random.jxx",
+    "version": "0.1.0",
+    "description": "Random number and string generator",
+    "author": "WE-BT16",
+    "homepage": "https://github.com/WE-BT16/random.jxx#readme",
+    "license": "GPL-3.0-only",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BT16/random.jxx.git"
+    },
+    "scripts": {
+        "install": "node-gyp configure build"
+    },
+    "bugs": {
+        "url": "https://github.com/random/random.jxx/issues"
+    },
+    "dependencies": {
+        "bindings": "~1.5.0",
+        "node-addon-api": "^1.0.0",
+        "node-gyp": "^9.0.0"
+    },
+    "gypfile": true
+}
