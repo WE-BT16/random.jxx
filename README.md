@@ -1,4 +1,5 @@
 # random.jxx
+Random number and string generator
 
 ## Install
 - Check you have the build requirements installed
