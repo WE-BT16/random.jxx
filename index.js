@@ -1,6 +1,3 @@
-try {
-    const { random } = require("./build/Release/random.node");
-    module.exports = random;
-} catch (error) {
-    throw new Error("Failed to load module, try rebuilding." + "\n" + error);
-}
+module.exports.string = require("./lib/string").string;
+module.exports.number = require("./lib/randomjxx").number;
+module.exports.CHARS = require("./lib/chars");
